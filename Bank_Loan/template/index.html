@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Churn Predictive Model</title>
+    <link rel="stylesheet" href='/staticFiles/style.css' />
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{url_for('predict')}}" method="post">
+			      <input type="text" name="Age" placeholder="Age" required="required" />
+			      <input type="text" name="Applicant Income" placeholder="Applicant Income" required="required" />
+                  <input type="text" name="Loan Amount" placeholder="Loan Amount" required="required" />
+                  <input type="text" name="Cibil Score" placeholder="Cibil Score" required="required" />
+                  <input type="text" name="Tenure" placeholder="Tenure" required="required" />
+            
+		    
+			      <h3>Gender</h3>
+            <select name="Gender" id="g" required="required">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <h3>Senior Citizen</h3>
+            <select name="Married" id="g" required="required">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+            <h3>Partner Type</h3>
+            <select name="Dependents" id="research" required="required">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h3>Dependent</h3>
+            <select name="Education" id="research" required="required">
+              <option value="1">Graduate</option>
+              <option value="0">Not Graduate</option>
+            </select>
+
+            <h3>Self Employed</h3>
+            <select name="Self Employed" id="research" required="required">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>   
+            
+            <h3>Previous Loan_Taken</h3>
+            <select name="Previous Loan_Taken" id="research" required="required">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+
+            <h3>Property Area</h3>
+            <select name="Property_Area" id="abc" required="required">
+              <option value="0">Rural</option>
+              <option value="1">Semiurban optic</option>
+              <option value="2">Urban</option>
+            </select>
+
+            <h3>Customer Bandwith</h3>
+            <select name="Customer Bandwith" id="research" required="required">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+                       	
+            <br><br><button id="sub" type="submit">Prediction</button>
+            <br>
+
+        </form>
+
+        <br><br>
+		{{ prediction_text }}
+    </div>
+  
+</body>
+
+</html>

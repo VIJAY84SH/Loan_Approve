@@ -1,0 +1,22 @@
+body{
+    background-color: mediumaquamarine;
+    text-align: center;
+}
+
+#g, #research{
+    width: 90px;
+    height: 43px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#gen:hover{
+    background-color: whitesmoke;
+}
+
+
+
+#research:hover{
+    background-color: rgb(165, 203, 173);
+}
